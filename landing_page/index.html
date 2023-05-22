@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+     <section class="cover">
+        <header>
+            <a href="#"><img src="images/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>This Who is<br><span>I AM</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus enim, tenetur sapiente animi nam numquam dolorem eaque 
+                    cupiditate impedit! Ut recusandae, 
+                    enim laborum expedita maiores laboriosam ea 
+                    aspernatur beatae quia.</p>
+                    <a href="#">View All Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="images/pepsi1.png" class="landing">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="images/pepsi1.png" onclick="imgSlider('images/pepsi1.png');changeBgcolor('#0062be')"></li>
+            <li><img src="images/pepsi2.png" onclick="imgSlider('images/pepsi2.png');changeBgcolor('#e60c2c')"></li>
+            <li><img src="images/pepsi3.png" onclick="imgSlider('images/pepsi3.png');changeBgcolor('#1e1e1e')"></li>
+        </ul>
+        <ul class="social">
+            <li><a href=""><img src="images/facebook.svg"></a></li>
+            <li><a href=""><img src="images/twitter.svg"></a></li>
+            <li><a href=""><img src="images/instagram.svg"></a></li>
+        </ul>
+     </section>
+    
+     <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.landing').src = anything;
+        }
+        function changeBgcolor(color){
+            const cover = document.querySelector('.cover');
+            cover.style.background = color;
+        }
+     </script>
+</body>
+</html>
